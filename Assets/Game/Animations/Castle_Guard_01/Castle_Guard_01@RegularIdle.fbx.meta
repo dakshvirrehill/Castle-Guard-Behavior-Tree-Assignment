@@ -1,272 +1,17 @@
 fileFormatVersion: 2
-guid: 509dd3119aa6ccf4790cbd711081bfd3
+guid: e3f2e40047783ff4ca741e60b0ae96d5
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      1: 100000
-    second: //RootNode
-  - first:
-      1: 100002
-    second: Head
-  - first:
-      1: 100004
-    second: HeadTop_End
-  - first:
-      1: 100006
-    second: Hips
-  - first:
-      1: 100008
-    second: LeftArm
-  - first:
-      1: 100010
-    second: LeftFoot
-  - first:
-      1: 100012
-    second: LeftForeArm
-  - first:
-      1: 100014
-    second: LeftHand
-  - first:
-      1: 100016
-    second: LeftHandIndex1
-  - first:
-      1: 100018
-    second: LeftHandIndex2
-  - first:
-      1: 100020
-    second: LeftHandIndex3
-  - first:
-      1: 100022
-    second: LeftHandIndex4
-  - first:
-      1: 100024
-    second: LeftHandThumb1
-  - first:
-      1: 100026
-    second: LeftHandThumb2
-  - first:
-      1: 100028
-    second: LeftHandThumb3
-  - first:
-      1: 100030
-    second: LeftHandThumb4
-  - first:
-      1: 100032
-    second: LeftLeg
-  - first:
-      1: 100034
-    second: LeftShoulder
-  - first:
-      1: 100036
-    second: LeftToe_End
-  - first:
-      1: 100038
-    second: LeftToeBase
-  - first:
-      1: 100040
-    second: LeftUpLeg
-  - first:
-      1: 100042
-    second: Neck
-  - first:
-      1: 100044
-    second: RightArm
-  - first:
-      1: 100046
-    second: RightFoot
-  - first:
-      1: 100048
-    second: RightForeArm
-  - first:
-      1: 100050
-    second: RightHand
-  - first:
-      1: 100052
-    second: RightHandIndex1
-  - first:
-      1: 100054
-    second: RightHandIndex2
-  - first:
-      1: 100056
-    second: RightHandIndex3
-  - first:
-      1: 100058
-    second: RightHandIndex4
-  - first:
-      1: 100060
-    second: RightHandThumb1
-  - first:
-      1: 100062
-    second: RightHandThumb2
-  - first:
-      1: 100064
-    second: RightHandThumb3
-  - first:
-      1: 100066
-    second: RightHandThumb4
-  - first:
-      1: 100068
-    second: RightLeg
-  - first:
-      1: 100070
-    second: RightShoulder
-  - first:
-      1: 100072
-    second: RightToe_End
-  - first:
-      1: 100074
-    second: RightToeBase
-  - first:
-      1: 100076
-    second: RightUpLeg
-  - first:
-      1: 100078
-    second: Spine
-  - first:
-      1: 100080
-    second: Spine1
-  - first:
-      1: 100082
-    second: Spine2
-  - first:
-      4: 400000
-    second: //RootNode
-  - first:
-      4: 400002
-    second: Head
-  - first:
-      4: 400004
-    second: HeadTop_End
-  - first:
-      4: 400006
-    second: Hips
-  - first:
-      4: 400008
-    second: LeftArm
-  - first:
-      4: 400010
-    second: LeftFoot
-  - first:
-      4: 400012
-    second: LeftForeArm
-  - first:
-      4: 400014
-    second: LeftHand
-  - first:
-      4: 400016
-    second: LeftHandIndex1
-  - first:
-      4: 400018
-    second: LeftHandIndex2
-  - first:
-      4: 400020
-    second: LeftHandIndex3
-  - first:
-      4: 400022
-    second: LeftHandIndex4
-  - first:
-      4: 400024
-    second: LeftHandThumb1
-  - first:
-      4: 400026
-    second: LeftHandThumb2
-  - first:
-      4: 400028
-    second: LeftHandThumb3
-  - first:
-      4: 400030
-    second: LeftHandThumb4
-  - first:
-      4: 400032
-    second: LeftLeg
-  - first:
-      4: 400034
-    second: LeftShoulder
-  - first:
-      4: 400036
-    second: LeftToe_End
-  - first:
-      4: 400038
-    second: LeftToeBase
-  - first:
-      4: 400040
-    second: LeftUpLeg
-  - first:
-      4: 400042
-    second: Neck
-  - first:
-      4: 400044
-    second: RightArm
-  - first:
-      4: 400046
-    second: RightFoot
-  - first:
-      4: 400048
-    second: RightForeArm
-  - first:
-      4: 400050
-    second: RightHand
-  - first:
-      4: 400052
-    second: RightHandIndex1
-  - first:
-      4: 400054
-    second: RightHandIndex2
-  - first:
-      4: 400056
-    second: RightHandIndex3
-  - first:
-      4: 400058
-    second: RightHandIndex4
-  - first:
-      4: 400060
-    second: RightHandThumb1
-  - first:
-      4: 400062
-    second: RightHandThumb2
-  - first:
-      4: 400064
-    second: RightHandThumb3
-  - first:
-      4: 400066
-    second: RightHandThumb4
-  - first:
-      4: 400068
-    second: RightLeg
-  - first:
-      4: 400070
-    second: RightShoulder
-  - first:
-      4: 400072
-    second: RightToe_End
-  - first:
-      4: 400074
-    second: RightToeBase
-  - first:
-      4: 400076
-    second: RightUpLeg
-  - first:
-      4: 400078
-    second: Spine
-  - first:
-      4: 400080
-    second: Spine1
-  - first:
-      4: 400082
-    second: Spine2
-  - first:
-      74: 7400000
-    second: warrior_idle
-  - first:
-      95: 9500000
-    second: //RootNode
+      74: -203655887218126122
+    second: RegularIdle
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -290,19 +35,19 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: warrior_idle
+      name: RegularIdle
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 344
+      lastFrame: 117
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -318,7 +63,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -326,10 +71,10 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -340,7 +85,7 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -350,8 +95,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
