@@ -1217,6 +1217,7 @@ GameObject:
   - component: {fileID: 2905819255246618034}
   - component: {fileID: 2905819255253995133}
   - component: {fileID: 2905819255253995135}
+  - component: {fileID: 5088789685030252446}
   m_Layer: 0
   m_Name: CastleGuard
   m_TagString: Untagged
@@ -1293,6 +1294,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759bc0cc2b4da8c4aac364928dc2c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5088789685030252446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2905819255253995122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc3e571fe1fc9c4998d4101003ebb6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mBridgeLink: {fileID: 0}
+  mNavMeshAgent: {fileID: 2905819255253995133}
+  mAnimator: {fileID: 2905819255246618034}
+  mHealth: 100
+  mDamageAmount: 10
+  mPatrolWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mInvestigationPoints: []
 --- !u!1 &2905819255253995124
 GameObject:
   m_ObjectHideFlags: 0
