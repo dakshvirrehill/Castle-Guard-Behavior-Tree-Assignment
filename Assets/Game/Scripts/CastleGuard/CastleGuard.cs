@@ -32,11 +32,10 @@ public class CastleGuard : NavMeshNPC
 
         }
     }
-
-
-
+    public bool InvestigatedPoint { get; set; }
     void Update()
     {
+        mBridgeLink.activated = mInvestigationPoints.Count > 0 || InvestigatedPoint;
         if(mInvestigationPoints.Count >= 5)
         {
             return;
@@ -50,6 +49,10 @@ public class CastleGuard : NavMeshNPC
                 NavMeshHit aClosestNMP;
                 if(NavMesh.SamplePosition(aHit.point, out aClosestNMP, 100,NavMesh.AllAreas))
                 {
+                    if(mInvestigationPoints.Count <= 0 && !InvestigatedPoint)
+                    {
+                        mNavMeshAgent.isStopped = true;
+                    }
                     mInvestigationPoints.Add(aClosestNMP.position);
                 }
             }

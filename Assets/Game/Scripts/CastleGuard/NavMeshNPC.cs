@@ -14,4 +14,14 @@ public class NavMeshNPC : MonoBehaviour
         mNavMeshAgent.isStopped = true;
     }
 
+    void OnAnimatorMove()
+    {
+        if(Time.deltaTime > 0)
+        {
+            if(mNavMeshAgent.desiredVelocity.sqrMagnitude != 0)
+            {
+                mNavMeshAgent.velocity = mAnimator.deltaPosition / Time.deltaTime;
+            }
+        }
+    }
 }

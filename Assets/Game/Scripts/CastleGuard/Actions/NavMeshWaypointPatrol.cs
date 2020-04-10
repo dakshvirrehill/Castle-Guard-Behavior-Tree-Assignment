@@ -24,10 +24,8 @@ public class NavMeshWaypointPatrol : Action
 		mDestination.Value = mWaypoints.Value[mWaypointIndex].position;
 		return TaskStatus.Success;
 	}
-
-	public override void OnEnd()
+	public override float GetPriority()
 	{
-		
+		return 5;
 	}
-
 }

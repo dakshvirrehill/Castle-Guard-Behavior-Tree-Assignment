@@ -17,17 +17,17 @@ public class NavMeshMoveToGoal : Action
 		{
 			mNPCInstance = GetComponent<NavMeshNPC>();
 		}
-		mNPCInstance.mAnimationListener.mOnAnimatorMove.AddListener(OnAnimatorMove);
+		//mNPCInstance.mAnimationListener.mOnAnimatorMove.AddListener(OnAnimatorMove);
 	}
 
-	void OnAnimatorMove()
-	{
-		if (Time.deltaTime <= 0)
-		{
-			return;
-		}
-		mNPCInstance.mNavMeshAgent.velocity = mNPCInstance.mAnimator.deltaPosition / Time.deltaTime;
-	}
+	//void OnAnimatorMove()
+	//{
+	//	if (Time.deltaTime <= 0)
+	//	{
+	//		return;
+	//	}
+	//	mNPCInstance.mNavMeshAgent.velocity = mNPCInstance.mAnimator.deltaPosition / Time.deltaTime;
+	//}
 
 	public override TaskStatus OnUpdate()
 	{
@@ -47,17 +47,18 @@ public class NavMeshMoveToGoal : Action
 													 Quaternion.LookRotation(mNPCInstance.mNavMeshAgent.desiredVelocity),
 													 Time.deltaTime * mAngularDampeningTime.Value);
 			}
-
-			return TaskStatus.Running;
+		}
+		else
+		{
+			mNPCInstance.mNavMeshAgent.isStopped = true;
+			mNPCInstance.mAnimator.SetFloat(mSpeedParameterName.Value, 0.0f);
 		}
 		return TaskStatus.Success;
 	}
 
-	public override void OnEnd()
-	{
-		mNPCInstance.mNavMeshAgent.isStopped = true;
-		mNPCInstance.mAnimator.SetFloat(mSpeedParameterName.Value, 0.0f);
-		mNPCInstance.mAnimationListener.mOnAnimatorMove.RemoveListener(OnAnimatorMove);
-	}
+	//public override void OnEnd()
+	//{
+	//	mNPCInstance.mAnimationListener.mOnAnimatorMove.RemoveListener(OnAnimatorMove);
+	//}
 
 }
