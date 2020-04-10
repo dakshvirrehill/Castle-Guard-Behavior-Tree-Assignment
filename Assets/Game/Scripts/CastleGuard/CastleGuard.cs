@@ -7,6 +7,7 @@ public class CastleGuard : NavMeshNPC
 {
     public OffMeshLink mBridgeLink;
     [SerializeField] float mHealth = 100;
+    [SerializeField] int mMaxInvestigationPoints = 5;
     [HideInInspector]public List<Vector3> mInvestigationPoints;
     public float GuardHealth 
     { 
@@ -35,7 +36,7 @@ public class CastleGuard : NavMeshNPC
     void Update()
     {
         mBridgeLink.activated = mInvestigationPoints.Count > 0 || InvestigatedPoint;
-        if(mInvestigationPoints.Count >= 5)
+        if(mInvestigationPoints.Count >= (mMaxInvestigationPoints-1))
         {
             return;
         }
