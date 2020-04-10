@@ -9,6 +9,7 @@ public class SetRandomIdle : Action
 	public SharedInt mIdleCount = 4;
 	public SharedString mIdleTriggerName = "Idle";
 	public SharedString mIdleIndexName = "IdleIndex";
+	public SharedString mIdleAnimName;
 	public override void OnStart()
 	{
 		if(mNPCInstance == null)
@@ -19,8 +20,10 @@ public class SetRandomIdle : Action
 
 	public override TaskStatus OnUpdate()
 	{
-		mNPCInstance.mAnimator.SetInteger(mIdleIndexName.Value, Random.Range(0, mIdleCount.Value));
+		int aIdleIndex = Random.Range(0, mIdleCount.Value);
+		mNPCInstance.mAnimator.SetInteger(mIdleIndexName.Value, aIdleIndex);
 		mNPCInstance.mAnimator.SetTrigger(mIdleTriggerName.Value);
+		mIdleAnimName.Value = string.Format("{0}{1}", mIdleTriggerName.Value, aIdleIndex);
 		return TaskStatus.Success;
 	}
 }
