@@ -18,10 +18,7 @@ public class NavMeshNPC : MonoBehaviour
     {
         if(Time.deltaTime > 0)
         {
-            if(mNavMeshAgent.desiredVelocity.sqrMagnitude != 0)
-            {
-                mNavMeshAgent.velocity = mAnimator.deltaPosition / Time.deltaTime;
-            }
+            mNavMeshAgent.velocity = mAnimator.deltaPosition / Time.deltaTime;
         }
     }
 }

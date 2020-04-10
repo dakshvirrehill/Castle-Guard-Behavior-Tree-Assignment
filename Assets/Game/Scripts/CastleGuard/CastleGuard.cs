@@ -7,7 +7,6 @@ public class CastleGuard : NavMeshNPC
 {
     public OffMeshLink mBridgeLink;
     [SerializeField] float mHealth = 100;
-    public float mDamageAmount = 10;
     [HideInInspector]public List<Vector3> mInvestigationPoints;
     public float GuardHealth 
     { 

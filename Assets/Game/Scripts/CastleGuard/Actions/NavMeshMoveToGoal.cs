@@ -17,48 +17,47 @@ public class NavMeshMoveToGoal : Action
 		{
 			mNPCInstance = GetComponent<NavMeshNPC>();
 		}
-		//mNPCInstance.mAnimationListener.mOnAnimatorMove.AddListener(OnAnimatorMove);
 	}
-
-	//void OnAnimatorMove()
-	//{
-	//	if (Time.deltaTime <= 0)
-	//	{
-	//		return;
-	//	}
-	//	mNPCInstance.mNavMeshAgent.velocity = mNPCInstance.mAnimator.deltaPosition / Time.deltaTime;
-	//}
 
 	public override TaskStatus OnUpdate()
 	{
 		if(Vector3.Distance(transform.position,mDestination.Value) > mStoppingDistance.Value)
 		{
-			float aSpeed = Vector3.Project(mNPCInstance.mNavMeshAgent.desiredVelocity, transform.forward).magnitude * mNPCInstance.mNavMeshAgent.speed;
+			Vector3 aVelocityVector = mNPCInstance.mNavMeshAgent.isOnOffMeshLink ?
+				(mDestination.Value - transform.position) :
+				mNPCInstance.mNavMeshAgent.desiredVelocity;
+			float aSpeed = Vector3.Project(aVelocityVector, transform.forward).magnitude * mNPCInstance.mNavMeshAgent.speed;
 			mNPCInstance.mAnimator.SetFloat(mSpeedParameterName.Value, aSpeed);
-
-			float aAngle = Vector3.Angle(transform.forward, mNPCInstance.mNavMeshAgent.desiredVelocity);
+			float aAngle = Vector3.Angle(transform.forward, aVelocityVector);
 			if (Mathf.Abs(aAngle) <= mDeadZone.Value)
 			{
-				transform.LookAt(transform.position + mNPCInstance.mNavMeshAgent.desiredVelocity);
+				transform.LookAt(transform.position + aVelocityVector);
 			}
 			else
 			{
 				transform.rotation = Quaternion.Lerp(transform.rotation,
-													 Quaternion.LookRotation(mNPCInstance.mNavMeshAgent.desiredVelocity),
+													 Quaternion.LookRotation(aVelocityVector),
 													 Time.deltaTime * mAngularDampeningTime.Value);
+			}
+			if(mNPCInstance.mNavMeshAgent.isOnOffMeshLink)
+			{
+				transform.position += mNPCInstance.mAnimator.deltaPosition;
+				if(Vector3.Distance(transform.position, mNPCInstance.mNavMeshAgent.currentOffMeshLinkData.endPos) <= mStoppingDistance.Value)
+				{
+					mNPCInstance.mNavMeshAgent.CompleteOffMeshLink();
+				}
 			}
 		}
 		else
 		{
+			if(mNPCInstance.mNavMeshAgent.isOnOffMeshLink)
+			{
+				mNPCInstance.mNavMeshAgent.CompleteOffMeshLink();
+			}
 			mNPCInstance.mNavMeshAgent.isStopped = true;
 			mNPCInstance.mAnimator.SetFloat(mSpeedParameterName.Value, 0.0f);
 		}
 		return TaskStatus.Success;
 	}
-
-	//public override void OnEnd()
-	//{
-	//	mNPCInstance.mAnimationListener.mOnAnimatorMove.RemoveListener(OnAnimatorMove);
-	//}
 
 }
